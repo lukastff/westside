@@ -1,1 +1,19 @@
 @import "tailwindcss";
+
+@import 'swiper/css';
+@import 'swiper/css/navigation';
+@import 'swiper/css/pagination';
+
+:root {
+    background: #12100D;
+    color: white;
+    font-family: "Oswald", sans-serif;
+    --swiper-navigation-color: red;
+    --swiper-pagination-color: red;
+}
+
+.swiper-pagination-bullet-active {
+    width: 100%;
+    max-width: 30px;
+    border-radius: 200px;
+}
