@@ -1,7 +1,7 @@
 function App() {
   return (
     <>
-      <p>My new Project</p>
+      <p className="text-[50px]">My new Project</p>
     </>
   )
 }
