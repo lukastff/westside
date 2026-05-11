@@ -1,0 +1,21 @@
+.link {
+  position: relative;
+
+  &:before {
+    position: absolute;
+    content: "";
+    bottom: -2px;
+    left: 0;
+    height: 2px;
+    background: white;
+    border-radius: 20px;
+    width: 0;
+    transition: width 0.3s ease;
+  }
+
+  &:hover {
+    &:before {
+      width: 100%;
+    }
+  }
+}

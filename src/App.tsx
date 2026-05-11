@@ -1,8 +1,10 @@
+import { Home } from './pages/Home/Home.tsx'
+
 function App() {
   return (
-    <>
-      <p className="text-[50px]">My new Project</p>
-    </>
+    <div className="relative">
+      <Home />
+    </div>
   )
 }
 

@@ -1,0 +1,16 @@
+.carousel  {
+  scroll-margin-top: 200px;
+  & > .swiper {
+    padding-bottom: 50px;
+
+    .swiper-pagination-bullet-active {
+      width: 100%;
+      max-width: 40px;
+      border-radius: 300px;
+    }
+
+    .swiper-pagination-bullet {
+      background-color: white;
+    }
+  }
+}

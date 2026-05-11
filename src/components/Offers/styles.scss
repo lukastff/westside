@@ -1,0 +1,19 @@
+#offers {
+    scroll-margin-top: 200px;
+    ul {
+        button {
+            cursor: pointer;
+            color: #AAA9A8;
+            transition: color 0.3s;
+
+            &.active {
+                color: #FFFFFF;
+            }
+
+            &:hover {
+                color: #FFFFFF;
+            }
+        }
+    }
+}
+

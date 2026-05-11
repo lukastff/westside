@@ -1,0 +1,8 @@
+footer > div > div > a {
+  color: #AAA9A8;
+  transition: all 0.3s ease;
+
+  &:hover {
+    color: white;
+  }
+}
