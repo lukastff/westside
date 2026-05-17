@@ -1,9 +1,9 @@
 import { useState } from 'react'
-import { Header } from '../../components/Header/Header.tsx'
-import { Banner } from '../../components/Banner/Banner.tsx'
-import { Carousel } from '../../components/Carousel/Carousel.tsx'
-import { Offers } from '../../components/Offers/Offers.tsx'
-import { Footer } from '../../components/Footer/Footer.tsx'
+import { Header } from '../../components/Header'
+import { Banner } from '../../components/Banner'
+import { Carousel } from '../../components/Carousel'
+import { Offers } from '../../components/Offers'
+import { Footer } from '../../components/Footer'
 
 export function Home() {
   const [activeTab, setActiveTab] = useState('offers')
@@ -12,7 +12,7 @@ export function Home() {
     setActiveTab(tab)
   }
 
-  return(
+  return (
     <>
       <Header onTabChange={handleTabChange} />
       <Banner />
@@ -21,8 +21,7 @@ export function Home() {
         <Carousel carousel="Em Breve" />
       </main>
       <Offers activeTab={activeTab} setActiveTab={setActiveTab} />
-      <Footer />
+      <Footer onTabChange={handleTabChange} />
     </>
-
   )
 }

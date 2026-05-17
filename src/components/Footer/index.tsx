@@ -1,6 +1,7 @@
 import './styles.scss'
+import type { HeaderProps } from '../Header'
 
-export function Footer() {
+export function Footer({ onTabChange }: HeaderProps) {
   return (
     <>
       <footer className="max-w-[1280px] w-full m-auto pb-[100px] px-[20px]">
@@ -8,14 +9,13 @@ export function Footer() {
           <div className="flex flex-col">
             <p className="mb-[16px] uppercase">Westside</p>
             <a href="">Sobre nos</a>
-            <a href="">Novidades</a>
-            <a href="">Em Breve</a>
+            <a href="/#novidades">Novidades</a>
+            <a href="/#em-breve">Em Breve</a>
             <a href="">Filmes</a>
-            <a href="">Ofertas</a>
-            <a href="">Comidas &amp; Bebidas</a>
-            <a href="">Eventos</a>
-            <a href="">Planos</a>
-            <a href="">Locais</a>
+            <a href="/#offers" onClick={() => onTabChange?.('offers')}>Ofertas</a>
+            <a href="/#offers" onClick={() => onTabChange?.('foods')}>Comidas &amp; Bebidas</a>
+            <a href="/#offers" onClick={() => onTabChange?.('events')}>Eventos</a>
+            <a href="/planos">Planos</a>
           </div>
           <div className="flex flex-col">
             <p className="mb-[16px] uppercase">Informação</p>

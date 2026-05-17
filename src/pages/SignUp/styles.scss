@@ -1,0 +1,14 @@
+.checkbox {
+  svg {
+    display: none;
+  }
+
+  input[type="checkbox"]:checked + svg {
+    display: block;
+    z-index: 55;
+  }
+}
+
+.arrow-right:hover > svg {
+  right: 90px;
+}

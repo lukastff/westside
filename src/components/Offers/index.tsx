@@ -1,3 +1,4 @@
+import { motion } from 'motion/react'
 import offerCombo from '../../assets/offers/offers1.png'
 import offerMonday from '../../assets/offers/offers2.png'
 import offerHalf from '../../assets/offers/offers3.png'
@@ -19,7 +20,14 @@ interface OffersProps {
 
 export function Offers({ activeTab, setActiveTab }: OffersProps) {
   return(
-    <div className="max-w-[1280px] w-full m-auto pb-[100px] px-[20px]" id="offers">
+    <motion.div 
+      className="max-w-[1280px] w-full m-auto pb-[100px] px-[20px]" 
+      id="offers"
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8 }}
+      viewport={{ once: true }}
+    >
       <ul className="flex gap-[40px] text-[40px] mb-[40px]">
         <button 
           className={activeTab === 'offers' ? 'active' : ''} 
@@ -112,6 +120,6 @@ export function Offers({ activeTab, setActiveTab }: OffersProps) {
           </a>
         </div>
       </div>
-    </div>
+    </motion.div>
   )
 }

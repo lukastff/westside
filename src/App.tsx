@@ -1,9 +1,9 @@
-import { Home } from './pages/Home/Home.tsx'
+import { AppRoutes } from './routes'
 
 function App() {
   return (
     <div className="relative">
-      <Home />
+      <AppRoutes />
     </div>
   )
 }

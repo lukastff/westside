@@ -1,0 +1,30 @@
+.plans {
+  background: linear-gradient(
+          180deg,
+          rgba(20,20,20,1) 0%,
+          rgba(5,5,5,1) 100%
+  );
+  box-shadow:
+          0 0 15px rgba(0,0,0,0.0),
+          0 0 40px rgba(0,0,0,0.0);
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &:hover {
+    box-shadow:
+            0 0 15px rgba(255,0,0,0.25),
+            0 0 40px rgba(255,0,0,0.10);
+  }
+
+  button {
+    transition: all 0.3s ease;
+    box-shadow:
+            0 0 15px rgba(0,0,0,0.0),
+            0 0 40px rgba(0,0,0,0.0);
+    &:hover {
+      box-shadow:
+              0 0 30px rgba(255,0,0,0.25),
+              0 0 80px rgba(255,0,0,0.10);
+    }
+  }
+}
