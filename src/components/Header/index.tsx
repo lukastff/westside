@@ -66,7 +66,7 @@ export function Header({ onTabChange }: HeaderProps) {
 
       <div className="hidden lg:block bg-red-600 h-[45px]">
         <ul className="flex items-center justify-center gap-[32px] max-w-[1480px] w-full h-full m-auto px-[20px] uppercase text-sm font-bold text-white">
-          <li><a href="/#novidades" className="link">Novidades</a></li>
+          <li><a href="/#em-cartaz" className="link">Em Cartaz</a></li>
           <li><a href="/#em-breve" className="link">Em Breve</a></li>
           <li><a href="#" className="link">Filmes</a></li>
           <li><a href="/#offers" className="link" onClick={() => onTabChange?.('offers')}>Ofertas</a></li>
@@ -100,7 +100,7 @@ export function Header({ onTabChange }: HeaderProps) {
 
           {/* Mobile Categories */}
           <ul className="flex flex-col gap-6 uppercase text-white font-bold">
-            <li><a href="/#novidades" onClick={toggleMenu}>Novidades</a></li>
+            <li><a href="/#em-cartaz" onClick={toggleMenu}>Em Cartaz</a></li>
             <li><a href="/#em-breve" onClick={toggleMenu}>Em Breve</a></li>
             <li><a href="#" onClick={toggleMenu}>Filmes</a></li>
             <li><a href="/#offers" onClick={() => { onTabChange?.('offers'); toggleMenu() }}>Ofertas</a></li>

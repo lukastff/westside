@@ -10,13 +10,14 @@ interface CarouselProps {
 
 export function Carousel({ carousel }: CarouselProps) {
   return(
-    <motion.div
-      initial={{ opacity: 0, y: 50 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.8 }}
-      viewport={{ once: true, amount: 0.2 }}
-    >
-      <div className="max-w-[1240px] w-full m-auto carousel" id={carousel.replace(' ', '-').toLowerCase()}>
+    <div>
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: true, amount: 0.2 }}
+        className="max-w-[1240px] w-full m-auto carousel"
+        id={carousel.replace(' ', '-').toLowerCase()}>
         <h2 className="text-[40px] mb-[40px]">{carousel}</h2>
         <Swiper
           modules={[Navigation, Pagination, Scrollbar]}
@@ -44,7 +45,7 @@ export function Carousel({ carousel }: CarouselProps) {
             <Card />
           </SwiperSlide>
         </Swiper>
-      </div>
-    </motion.div>
+      </motion.div>
+    </div>
   )
 }

@@ -28,7 +28,7 @@ export function Banner() {
         pagination={{
           clickable: true,
         }}
-        className="banner"
+        className="banner min-h-[363px]"
       >
         <SwiperSlide><img src={prada} alt="Diabo Veste Prada" /></SwiperSlide>
         <SwiperSlide><img src={emily} alt="Diabo Veste Prada" /></SwiperSlide>

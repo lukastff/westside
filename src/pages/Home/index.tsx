@@ -17,7 +17,7 @@ export function Home() {
       <Header onTabChange={handleTabChange} />
       <Banner />
       <main className="px-[20px] py-[100px] flex flex-col gap-[100px]">
-        <Carousel carousel="Novidades" />
+        <Carousel carousel="Em Cartaz" />
         <Carousel carousel="Em Breve" />
       </main>
       <Offers activeTab={activeTab} setActiveTab={setActiveTab} />

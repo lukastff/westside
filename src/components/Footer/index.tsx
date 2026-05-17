@@ -9,7 +9,7 @@ export function Footer({ onTabChange }: HeaderProps) {
           <div className="flex flex-col">
             <p className="mb-[16px] uppercase">Westside</p>
             <a href="">Sobre nos</a>
-            <a href="/#novidades">Novidades</a>
+            <a href="/#em-cartaz">Novidades</a>
             <a href="/#em-breve">Em Breve</a>
             <a href="">Filmes</a>
             <a href="/#offers" onClick={() => onTabChange?.('offers')}>Ofertas</a>

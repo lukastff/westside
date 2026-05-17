@@ -24,13 +24,13 @@ interface PlanCardProps {
 export function PlanCard({ plan }: PlanCardProps) {
   return (
     <motion.div
-      initial={{ opacity: 0, y: 30 }}
+      initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       whileHover={{
         scale: 1.1,
-        transition: { duration: 0.2, ease: 'easeOut' },
+        transition: { duration: 0.2, ease: 'linear' },
       }}
-      transition={{ duration: 0.4, ease: 'easeIn' }}
+      transition={{ duration: 0.4, ease: 'linear' }}
       viewport={{ once: true }}
       className="plans p-[20px] border-[2px] border-[#c40000] rounded-[20px] max-w-xs w-full flex flex-col justify-between h-[650px]">
       <div>
