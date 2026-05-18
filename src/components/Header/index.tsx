@@ -78,18 +78,17 @@ export function Header({ onTabChange }: HeaderProps) {
 
       <div className={`lg:hidden fixed inset-0 top-[78px] bg-[#12100D] z-50 transition-transform duration-300 ease-in-out ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
         <div className="flex flex-col h-full overflow-y-auto p-6 gap-8">
-          {/* Mobile Search */}
+
           <div className="relative w-full">
             <input type="text" className="bg-white rounded w-full px-4 py-3 pr-10 text-black" placeholder="O que você está procurando?" />
             <Search className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-500" />
           </div>
 
-          {/* Mobile User Actions */}
           <div className="flex flex-col gap-4">
-            <a href="/public" className="flex items-center gap-3 text-white text-lg font-medium border-b border-white/10 pb-4">
+            <a href="/login" className="flex items-center gap-3 text-white text-lg font-medium border-b border-white/10 pb-4">
               <LogIn size={20} /> Entre
             </a>
-            <a href="/public" className="flex items-center gap-3 text-white text-lg font-medium border-b border-white/10 pb-4">
+            <a href="/registro" className="flex items-center gap-3 text-white text-lg font-medium border-b border-white/10 pb-4">
               <User size={20} /> Registre-se
             </a>
           </div>
@@ -98,7 +97,6 @@ export function Header({ onTabChange }: HeaderProps) {
             <button type="button" className="text-red-600 font-bold">Goiânia Shopping</button>
           </div>
 
-          {/* Mobile Categories */}
           <ul className="flex flex-col gap-6 uppercase text-white font-bold">
             <li><a href="/#em-cartaz" onClick={toggleMenu}>Em Cartaz</a></li>
             <li><a href="/#em-breve" onClick={toggleMenu}>Em Breve</a></li>

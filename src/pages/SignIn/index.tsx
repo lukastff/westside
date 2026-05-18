@@ -9,13 +9,13 @@ import { motion } from 'motion/react'
 
 export function SignIn() {
   return (
-    <div className="w-full h-screen flex justify-center items-center gap-20">
+    <div className="min-h-screen flex flex-col lg:flex-row lg:gap-[100px] justify-center items-center px-[20px] py-[100px] md:py-[0]">
       <motion.div
         initial={{ opacity: 0, x: -30 }}
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.4, ease: 'easeIn' }}
         viewport={{ once: true }}
-        className="max-w-[350px]">
+        className="w-full max-w-[350px] mb-[50px]">
         <a href="/">
           <img src={logo} className="w-[350px] mb-15" />
         </a>
@@ -24,9 +24,9 @@ export function SignIn() {
           animate={{ '--line-width': '100px' } as any}
           transition={{ duration: 0.8 }}
           className="relative msg text-center text-[58px] leading-18">Faça seu login <span className="text-[red]">na plataforma</span></motion.p>
-        <a href="/" className="arrow-left relative flex justify-center items-center mt-[40px]">
+        <a href="/" className="arrow-left group relative flex justify-center items-center gap-2 mt-[40px]">
+          <ArrowLeft className="transition-all duration-300 ease-in-out group-hover:-translate-x-1" />
           <p className="text-center">Voltar para o site</p>
-          <ArrowLeft className="absolute left-[95px] transition-all duration-300 ease-in-out" />
         </a>
       </motion.div>
 
@@ -35,7 +35,7 @@ export function SignIn() {
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.4, ease: 'easeIn' }}
         viewport={{ once: true }}
-        onSubmit={SignIn} className="flex flex-col w-full max-w-[480px] gap-5 p-16 rounded-md">
+        onSubmit={SignIn} className="w-full flex flex-col max-w-[480px] gap-5 px-[40px] py-[30px] rounded-md">
         <div className="mb-4">
           <h2 className="text-[42px]">Seja Bem-vindo</h2>
           <p className="opacity-[0.8]">Entre com suas credenciais para continuar.</p>

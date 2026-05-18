@@ -1,5 +1,9 @@
 .carousel  {
   scroll-margin-top: 200px;
+  @media (max-width: 768px) {
+    scroll-margin-top: 150px;
+  }
+
   & > .swiper {
     padding-bottom: 50px;
 
