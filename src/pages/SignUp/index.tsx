@@ -58,7 +58,9 @@ export function SignUp() {
         transition={{ duration: 0.4, ease: 'easeIn' }}
         viewport={{ once: true }}
         className="max-w-[350px]">
-        <img src={logo} className="w-[350px] mb-15" />
+        <a href="/">
+          <img src={logo} className="w-[350px] mb-15" />
+        </a>
         <motion.p
           initial={{ '--line-width': '0px' } as any}
           animate={{ '--line-width': '100px' } as any}
