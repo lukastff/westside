@@ -9,23 +9,23 @@ import { motion } from 'motion/react'
 
 export function SignUp() {
   return (
-    <div className="h-screen flex justify-center items-center gap-20">
+    <div className="min-h-screen flex flex-col lg:flex-row justify-center items-center gap-20 px-[20px] py-[100px] md:py-[0]">
       <motion.form
         initial={{ opacity: 0, x: -30 }}
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.4, ease: 'easeIn' }}
         viewport={{ once: true }}
-        className="w-full max-w-[580px] p-6 flex flex-col gap-6 rounded-md">
+        className="order-1 lg:order-0 w-full max-w-[580px] p-6 flex flex-col gap-6 rounded-md">
         <div>
           <h2 className="text-[58px]">Crie sua conta</h2>
           <p className="opacity-[0.8]">Preencha os dados abaixo para se registrar.</p>
         </div>
         <Input label="Nome Completo" type="text" placeholder="Nome" Icon={User}/>
-        <div className="flex gap-5">
+        <div className="flex flex-col lg:flex-row gap-5">
           <Input label="E-mail" type="email" placeholder="E-mail" Icon={Mail}/>
           <Input label="Confirme seu e-mail" type="email" placeholder="E-mail" Icon={Mail}/>
         </div>
-        <div className="flex gap-5">
+        <div className="flex flex-col lg:flex-row gap-5">
           <Input label="Senha" type="password" placeholder="Senha" Icon={Lock}/>
           <Input label="Confirme sua senha" type="password" placeholder="Confirme sua senha" Icon={Lock}/>
         </div>
@@ -51,6 +51,7 @@ export function SignUp() {
           <a href="/login" className="font-bold text-[#B90009] hover:text-[red] transition duration-300 ease-in-out">Faça seu login</a>
         </div>
       </motion.form>
+
       <motion.div
         initial={{ opacity: 0, x: 30 }}
         whileInView={{ opacity: 1, x: 0 }}
@@ -63,9 +64,9 @@ export function SignUp() {
           animate={{ '--line-width': '100px' } as any}
           transition={{ duration: 0.8 }}
           className="relative msg text-center text-[58px] leading-15">Crie sua conta<span className="text-[red] font-light block">e aproveite o melhor da Westside.</span></motion.p>
-        <a href="/" className="arrow-right relative flex justify-center items-center mt-[40px]">
+        <a href="/" className="arrow-right group relative flex justify-center items-center gap-2 mt-[40px]">
           <p className="text-center">Voltar para o site</p>
-          <ArrowRight className="absolute right-[95px] transition-all duration-300 ease-in-out" />
+          <ArrowRight className="transition-all duration-300 ease-in-out group-hover:-translate-x-[-10px]" />
         </a>
       </motion.div>
     </div>
