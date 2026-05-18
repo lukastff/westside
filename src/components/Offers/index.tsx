@@ -28,7 +28,7 @@ export function Offers({ activeTab, setActiveTab }: OffersProps) {
       transition={{ duration: 0.8 }}
       viewport={{ once: true }}
     >
-      <ul className="flex gap-[40px] text-[40px] mb-[40px]">
+      <ul className="flex justify-center md:justify-start items-center gap-[40px] text-[20px] md:text-[40px] mb-[40px]">
         <button 
           className={activeTab === 'offers' ? 'active' : ''} 
           onClick={() => setActiveTab('offers')}
@@ -49,15 +49,15 @@ export function Offers({ activeTab, setActiveTab }: OffersProps) {
         </button>
       </ul>
             
-      <div className={`flex gap-[16px] ${activeTab === 'offers' ? '' : 'hidden'}`}>
-        <div className="flex gap-[16px]">
+      <div className={`flex gap-[16px] justify-center items-center lg:justify-start lg:items-start ${activeTab === 'offers' ? '' : 'hidden'}`}>
+        <div className="flex flex-col md:flex-row gap-[16px]">
           <img src={offerCombo} alt="" className="h-[522px]" />
           <div className="flex flex-col gap-[16px]">
             <img src={offerMonday} alt="" className="h-[253px]" />
             <img src={offerHalf} alt="" className="h-[253px]" />
           </div>
         </div>
-        <div className="flex flex-col gap-[16px]">
+        <div className="hidden lg:flex flex-col gap-[16px]">
           <a>
             <span className="block text-[30px]">Ultimas ofertas de comidas</span>
             <p className="font-light text-[16px] text-[#AAA9A8]">Encontre a oferta perfeita para você</p>
@@ -74,14 +74,14 @@ export function Offers({ activeTab, setActiveTab }: OffersProps) {
       </div>
 
       <div className={`flex gap-[16px] ${activeTab === 'foods' ? '' : 'hidden'}`}>
-        <div className="flex gap-[16px]">
+        <div className="flex flex-col md:flex-row gap-[16px]">
           <img src={foodCombo} alt="" className="h-[522px]" />
           <div className="flex flex-col gap-[16px]">
             <img src={popcorn} alt="" className="h-[253px]" />
             <img src={foodComboComplete} alt="" className="h-[253px]" />
           </div>
         </div>
-        <div className="flex flex-col gap-[16px]">
+        <div className="hidden md:flex flex-col gap-[16px]">
           <a>
             <span className="block text-[30px]">Combos WestSide</span>
             <p className="font-light text-[16px] text-[#AAA9A8]">Direto da costa oeste, temos varias opções para servir oque seu bucho quer</p>
@@ -98,14 +98,14 @@ export function Offers({ activeTab, setActiveTab }: OffersProps) {
       </div>
 
       <div className={`flex gap-[16px] ${activeTab === 'events' ? '' : 'hidden'}`}>
-        <div className="flex gap-[16px]">
+        <div className="flex flex-col md:flex-row gap-[16px]">
           <img src={events} alt="" className="h-[522px]" />
           <div className="flex flex-col gap-[16px]">
             <img src={eventsCoop} alt="" className="h-[253px]" />
             <img src={eventHappy} alt="" className="h-[253px]" />
           </div>
         </div>
-        <div className="flex flex-col gap-[16px]">
+        <div className="hidden md:flex flex-col gap-[16px]">
           <a>
             <span className="block text-[30px]">Não somos apenas um cinema</span>
             <p className="font-light text-[16px] text-[#AAA9A8]">Estamos com você em todo estágio da vida, seja diversão ou trabalho</p>
