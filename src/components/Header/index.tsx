@@ -33,7 +33,7 @@ export function Header({ onTabChange }: HeaderProps) {
   }
 
   return (
-    <header className={`sticky top-0 left-0 z-999 bg-[#12100D] transition-shadow duration-300  ${scrolled ? 'shadow-2xl' : 'shadow-none'}`}>
+    <header className={`sticky top-[-1px] left-0 z-50 bg-[#12100D] transition-shadow duration-300  ${scrolled ? 'shadow-2xl' : 'shadow-none'}`}>
       <nav className="flex items-center justify-between max-w-[1480px] w-full h-[80px] m-auto px-[20px]">
         <a href="/">
           <img src={logo} alt="Logo Westside" className="w-[150px] md:w-[200px]" />
